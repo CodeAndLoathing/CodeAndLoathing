@@ -1,4 +1,4 @@
-baseURL = "https://codeandloathing.github.io/"
+baseURL = "https://blog.ccodeandloathing.com/"
 languageCode = "en-us"
-title = "codeandloathing.github.io/"
+title = "code and loathing"
 theme="ananke"

@@ -8,6 +8,8 @@ This post describes how to connect to a serial port on a [VirtualBox](https://ww
 
 The serial console has traditionally played a special role in system configuration, administration and recovery. Access through this method may provide special elevated privileges and/or not have the same authentication requirements as access through other means.
 
+<!--more-->
+
 For the VirtualBox VM you wish to connect to, go to the serial port settings.
 
 * Enable the Serial Port and select the port number you want to connect to (ie, COM1)

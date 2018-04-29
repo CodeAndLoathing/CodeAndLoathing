@@ -6,7 +6,7 @@ tags: ["virtualbox","putty"]
 
 # Connect Putty to VirtualBox Serial Port using Named Pipe
 
-This post describes how to connect to the serial console to a [VirtualBox](https://www.virtualbox.org/)) guest VM using [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/).
+This post describes how to connect to the serial console to a [VirtualBox](https://www.virtualbox.org/) guest VM using [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/).
 
 The serial console has traditionally played a special role in system configuration, administration and recovery. Access through this method may provide special elevated privileges and/or not have the same authentication requirements as access through other means.
 

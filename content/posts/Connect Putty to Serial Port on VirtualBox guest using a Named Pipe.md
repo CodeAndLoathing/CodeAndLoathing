@@ -19,7 +19,7 @@ For the VirtualBox VM you wish to connect to, go to the serial port settings.
 *{PIPE_NAME} can be any name of your choice*  
 *ie: \\.\pipe\COM1 or \\.\pipe\MYPIPE*
 
-![](/images/PuTTYConfiguration.png)
+![](/images/virtualbox-serial-ports.png)
 
 Fire up your VM and launch PuTTY.
 
@@ -28,7 +28,7 @@ Fire up your VM and launch PuTTY.
 *ie: \\.\pipe\COM1*  
 *Leave the speed at the default 9600*
 
-![](/images/virtualbox-serial-ports.png)
+![](/images/PuTTYConfiguration.png)
 
 Open the connection and PuTTY should now be connected to Serial Port via your named pipe.  
 You may have to hit enter one or more times for something to be displayed.

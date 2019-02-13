@@ -1,4 +1,5 @@
-baseURL = "//blog.codeandloathing.com/"
+baseURL = "https://blog.codeandloathing.com/"
 languageCode = "en-us"
 title = "code and loathing"
-theme="ananke"
+theme = "ananke-customized"
+googleAnalytics = "UA-134504209-1"

@@ -4,11 +4,11 @@ date: 2019-02-16T09:43:56-09:00
 tags: ["O365", "SkypeForBusiness"]
 ---
 
-Sometimes when screensharing with Skype for Business the remotely presented screen will be blurry, but if the remote viewer requests control the screenshare will suddenly become clear.
+Recently I've encountered an issue when screensharing via Skype for Business with some users. The remotely presented screen will be blurry, but if the remote viewer requests control the screenshare will suddenly become clear for them and stay that way even after they release control.
 
-If that is the case there's probably something going wrong with the VbSS (Video based Screen Sharing) mechanism that Microsoft uses now in Skype for Business for screen sharing.
+I'm guessing there's probably something going wrong with the VbSS (Video based Screen Sharing) mechanism that Microsoft uses now in Skype for Business for screen sharing.
 
-Forcing Skype to revert back to using RDP (which I'm guessing is also what happens when a user requests control) resolved the issue for me.
+Forcing Skype to revert back to using RDP (which perhaps is also what happens when a user requests control) resolved the issue for me.
 
 Run the following reg file, or manually create the below entries, to disable VbSS and make sure to completely restart Skype.
 (Note that this is assuming you're using the Office 2016 / ver 16.* version of Skype for Business ) :

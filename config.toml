@@ -3,3 +3,37 @@ languageCode = "en-us"
 title = "code and loathing"
 theme = "ananke-customized"
 googleAnalytics = "UA-134504209-1"
+
+paginate = 5
+
+[params]
+  # dir name of your blog content (default is `content/posts`)
+  contentTypeName = "post"
+  # ["orange", "blue", "red", "green", "pink"]
+  themeColor = "orange"
+  # if you set this to 0, only submenu trigger will be visible
+  showMenuItems = 2
+
+[languages]
+  [languages.en]
+    title = "Code and Loathing"
+    subtitle = "some code. much loathing."
+    keywords = ""
+    copyright = ""
+    menuMore = "Show more"
+    readMore = "Read more"
+    readOtherPosts = "Read other posts"
+
+    [languages.en.params.logo]
+      logoText = "Code & Loathing"
+      logoHomeLink = "/"
+
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "post"
+        name = "Posts"
+        url = "/post"
+      [[languages.en.menu.main]]
+        identifier = "tool"
+        name = "Tools"
+        url = "/tool"

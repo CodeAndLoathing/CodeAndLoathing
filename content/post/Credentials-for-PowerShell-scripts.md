@@ -27,9 +27,9 @@ Well, we can use the PSCredential constructor. It takes a SecureString for the p
     $Password = ConvertTo-SecureString -AsPlainText "mySecretPassword333" -Force
     $Credential = New-Object System.Management.Automation.PSCredential ($Username, $Password)
 ```
-While this works - it is only as secure as how tightly you've buttoned down read access to your script file since you'd have the password sitting right there in plaintext.
+While this works - it is only as secure as however tightly you've buttoned down read access to your script file since you would have the password sitting right there in plaintext.
 
-Note that you can easily retrieve the plaintext password if running in the same PowerShell session using GetNetworkCredential:
+Note that you can easily retrieve the plaintext password from the PSCredential object if running in the same PowerShell session using GetNetworkCredential:
 ```powershell
     $Credential.GetNetworkCredential().Password
     mySecretPassword333
@@ -41,7 +41,7 @@ Also note that Microsoft generally recommends [moving away](https://github.com/d
 
 We can marginally increase the security of our above solution by storing the credentials encrypted instead of in plaintext.
 
-A SecureString can be converted into an encrypted string using PowerShell cmdlet [ConvertFrom-SecureString](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/convertfrom-securestring?view=powershell-6)
+A SecureString can be converted into an encrypted string using PowerShell cmdlet [ConvertFrom-SecureString](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/convertfrom-securestring?view=powershell-6) and back again using [ConvertTo-SecureString](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/convertto-securestring?view=powershell-6)
 
 Here's an exampe of how we could take a set of known credentials, encrypt them, and save them out to a file for later use.
 

@@ -29,7 +29,7 @@ Well, we can use the PSCredential constructor. It takes a SecureString for the p
 ```
 While this works - it is only as secure as however tightly you've buttoned down read access to your script file since you would have the password sitting right there in plaintext.
 
-Note that you can easily retrieve the plaintext password from the PSCredential object if running in the same PowerShell session using GetNetworkCredential:
+Note that you can easily retrieve the plaintext password from the PSCredential object if running in the same PowerShell session using the provided GetNetworkCredential method:
 ```powershell
     $Credential.GetNetworkCredential().Password
     mySecretPassword333

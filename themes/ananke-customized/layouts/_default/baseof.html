@@ -19,15 +19,15 @@
 
     {{ $stylesheet := .Site.Data.webpack_assets.app }}
     {{ with $stylesheet.css }}
-      <link href="{{ absURL (printf "%s%s" "/dist/" .) }}" rel="stylesheet">
+      <link href="{{ relURL (printf "%s%s" "dist/" .) }}" rel="stylesheet">
     {{ end }}
 
     {{ range .Site.Params.custom_css }}
-      <link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">
+      <link rel="stylesheet" href="{{ relURL ($.Site.BaseURL) }}{{ . }}">
     {{ end }}
 
     {{ block "favicon" . }}
-      {{ partial "site-favicon.html" . }}
+      {{ partialCached "site-favicon.html" . }}
     {{ end }}
 
     {{ if .RSSLink }}
@@ -52,7 +52,7 @@
     <main class="pb7" role="main">
       {{ block "main" . }}{{ end }}
     </main>
-    {{ block "footer" . }}{{ partial "site-footer.html" . }}{{ end }}
-    {{ block "scripts" . }}{{ partial "site-scripts.html" . }}{{ end }}
+    {{ block "footer" . }}{{ partialCached "site-footer.html" . }}{{ end }}
+    {{ block "scripts" . }}{{ partialCached "site-scripts.html" . }}{{ end }}
   </body>
 </html>

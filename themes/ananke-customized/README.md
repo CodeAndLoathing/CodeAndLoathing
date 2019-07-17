@@ -10,9 +10,9 @@ Features
 
 - Responsive
 - Accessible
-- Contact form 
+- Contact form
 - Custom Robots.txt (changes values based on environment)
-- Internal templates for meta data, google analytics, and DISQUS comments
+- Internal templates for meta data, google analytics, and DISQUS or COMMENTO comments
 - RSS Discovery
 - Table of Contents (must declare `toc: true` in post parameter)
 
@@ -24,6 +24,7 @@ Also includes examples of Hugo Features or Functions:
 - Custom shortcode
 - Related content
 - Hugo built-in menu
+- i18n
 - `with`
 - `HUGO_ENV`
 - `first`
@@ -70,13 +71,20 @@ You may need to delete the line: `themesDir = "../.."`
 
 ### Add comments
 
-To enable DISQUS comments, add `disqusShortname = YOURSHORTNAME` to your config file.
+To enable comments, add following to your config file:
 
-
+- DISQUS: `disqusShortname = YOURSHORTNAME`
+- COMMENTO:
+  ```
+  [params]
+    commentoEnable = true`
+  ```
 
 ### Change the hero background
 
-For any page or post you can add a featured image by including the local path in front matter (see content in the ExampleSite folder for examples): `featured_image: '/images/gohugo-default-sample-hero-image.jpg'`
+For any page or post you can add a featured image by including the local path in front matter (see content in the `exampleSite/content/_readme.md` file for examples): `featured_image: '/images/gohugo-default-sample-hero-image.jpg'`
+
+If you would like to hide the header text on the featured image on a page, set `omit_header_text` to `true`. See `exampleSite/content/contact.md` for an example.
 
 You don't need an image though. The default background color is black, but you can change the color, by changing the default color class in the config.toml file. Choose a background color from any on the [Tachyons](http://tachyons.io/docs/themes/skins/) library site, and preface it with "bg-"
 
@@ -89,7 +97,7 @@ example: `background_color_class = "bg-blue"` or `background_color_class = "bg-g
 This theme includes a shortcode for a contact form that you can add to any page (there is an example on the contact page in the exampleSite folder). One option is to use [formspree.io](//formspree.io/) as proxy to send the actual email. Each month, visitors can send you up to one thousand emails without incurring extra charges. Visit the Formspree site to get the "action" link and add it to your shortcode like this:
 
 ```
-{{< form-contact action="http://formspree.io/your@email.com" >}}
+{{< form-contact action="https://formspree.io/your@email.com" >}}
 ```
 
 ### Update font or body classes
@@ -126,6 +134,11 @@ For example, if your css files are `static/css/custom.css` and `static/css/custo
       custom_css = ["css/custom.css","css/custom2.css"]
 ```
 
+### Show Reading Time and Word Contributing
+
+If you add a key of `show_reading_time` true to either the Config Params, a page or section's front matter, articles will show the reading time and word count.
+
+
 ### Nearly finished
 
 In order to see your site in action, run Hugo's built-in local server.
@@ -134,6 +147,13 @@ In order to see your site in action, run Hugo's built-in local server.
 
 Now enter [`localhost:1313`](http://localhost:1313/) in the address bar of your browser.
 
+## Production
+
+To run in production (e.g. to have Google Analytics show up), run `HUGO_ENV=production` before your build command. For example:
+
+```
+HUGO_ENV=production hugo
+```
 
 ## Contributing
 

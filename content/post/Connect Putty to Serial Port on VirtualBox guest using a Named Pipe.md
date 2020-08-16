@@ -1,7 +1,7 @@
 ---
 title: "Connect Putty to Serial Port on VirtualBox guest using a Named Pipe"
 date: 2018-04-28T10:48:38-08:00
-tags: ["virtualbox","putty"]
+tags: ["VirtualBox","PuTTY"]
 ---
 
 This post describes how to connect to a serial port on a [VirtualBox](https://www.virtualbox.org/) guest VM using [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/).

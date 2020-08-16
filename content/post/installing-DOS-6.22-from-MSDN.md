@@ -10,17 +10,17 @@ If you have a Visual Studio subscription, formerly known as a MSDN subscription,
 ## Steps
 
 ### Download and extract DOS 6.22
-Download the MS DOS 6.22 download from your [Visual Studio subscription](https://my.visualstudio.com/Downloads?q=dos&pgroup=).
+Download MS DOS 6.22 from your [Visual Studio subscription](https://my.visualstudio.com/Downloads?q=dos&pgroup=).
 
 ![](/images/DOS622_0.png#thumbnail)
 
-You end up with a .EXE file. I used [7-Zip](https://7-zip.org) to extract the contents. 
+You'll end up with an .EXE file. I used [7-Zip](https://7-zip.org) to extract the contents but you can probably run the .EXE to get the same result.
 
 ![](/images/DOS622_1.png#thumbnail)
 
 The 3 files we're interested in are the ones with filenames starting with "144" in the DISKS subfolder.
-These are images of the 3 1.44 MB floppy disks originally used to install this version of MS DOS.
-Copy these out to a safe location.
+These are images of the three 1.44 MB floppy disks originally used to install this version of MS DOS.
+Copy these out to a safe location that you can access later.
 
 ### Create and start a new VirtualBox VM
 

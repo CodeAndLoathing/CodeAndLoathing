@@ -38,3 +38,9 @@ paginate = 5
         identifier = "tool"
         name = "Tools"
         url = "/tool"
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
